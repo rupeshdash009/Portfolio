@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, '-apple-system', 'BlinkMacSystemFont', 'Segoe UI',' Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+    background: rgb(232, 209, 255);
+    padding-top: 10px;
+  
+}
+.hero-header{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+.wrapper{
+    width: 1280px;
+    max-width: 98%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+header{
+    padding: 4px 0 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    padding-left: 23px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 700;
+    color: #000000;
+    cursor: pointer;
+    transition: color 0.10s, transform 0.5s; /* Adding transition for smooth animation */
+}
+.logo:hover {
+    color: #9900ff;
+    transform: rotateY(360deg) translateZ(1px); /* Applying 3D rotation on hover */
+}
+input{
+    display: none;
+}
+.checkbox{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    cursor: pointer;
+}
+.checkbox i{
+    font-size: 2rem;
+    color: #9900ff;
+    cursor: pointer;    
+}
+ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    transition: left 0.3s;
+    padding-right: 20px;
+}
+ul li a{
+    height: fit-content;
+    border: 2px solid transparent;
+    font-weight: 700;
+    color: #000000;
+    transition: 0.2s;
+}
+ul li a:hover{
+  color: #9900ff;
+}
+nav .navlinks{
+    list-style-type:none;
+}
+nav .navlinks li{
+    display: inline-block;
+}
+nav .navlinks li a{
+    color: #9900ff;
+    margin-right: 2.5rem;
+    font-weight: 780;
+}
+._container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+._container .hero-pic{
+   width: 200px;
+   height: 260px;
+   overflow: hidden;
+   box-shadow: 5px 7px 25px rgb(131, 85, 145);
+}
+.hero-pic img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+.hero-pic img:hover{
+    transform: scale(0.9);
+}
+.hero-text{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.hero-text h5{
+    color: rgb(0, 0, 0);
+    font-size: 23px;
+}
+.hero-text h5 span{
+    color: rgb(149, 0, 218); 
+    font-size: 18px;
+}
+.hero-text h1{
+    color: rgb(153, 0, 224);
+    font-size: 3rem;
+}
+.connect h4{
+  display: none;
+}
+.social i{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+    
+}
+.social i:hover{
+    color: #9900ff;
+    transform: rotate(360deg);
+}
+@media(max-width:930px)  {
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 80px;
+        background-color: rgb(232, 209, 255);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    nav #check:checked ~ul{
+        left: 0;
+        transition: 0.9s;
+    }
+    ul li a{
+        font-size: 1.2rem;
+    }
+    nav .checkbox{
+        display: inline-block;
+    }
+    nav .togglebtn{
+        display: absolute;
+    }
+  
+}
+@media(max-width:768px) {
+    ._container{
+        flex-direction: column;
+    }
+    .hero-text{
+        padding: 40px 0px;
+    }
+    .connect h4{
+        transition: 0.9s;
+        display: flex;
+        padding: 6px;
+      }
+}
